@@ -1,1 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcards</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
 
+    <header>
+        <h1>Meus Flashcards de HTML & CSS</h1>
+    </header>
+
+    <main>
+        <div class="flashcard-container" onclick="this.querySelector('.flashcard').classList.toggle('flipped')">
+            <div class="flashcard">
+                <div class="flashcard-face flashcard-front">
+                    <h2>O que significa HTML?</h2>
+                </div>
+                <div class="flashcard-face flashcard-back">
+                    <p>HyperText Markup Language (Linguagem de Marcação de Hipertexto).</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flashcard-container" onclick="this.querySelector('.flashcard').classList.toggle('flipped')">
+            <div class="flashcard">
+                <div class="flashcard-face flashcard-front">
+                    <h2>Para que serve a tag &lt;p&gt;?</h2>
+                </div>
+                <div class="flashcard-face flashcard-back">
+                    <p>Para definir um parágrafo de texto.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flashcard-container" onclick="this.querySelector('.flashcard').classList.toggle('flipped')">
+            <div class="flashcard">
+                <div class="flashcard-face flashcard-front">
+                    <h2>Qual a função do CSS?</h2>
+                </div>
+                <div class="flashcard-face flashcard-back">
+                    <p>Estilizar o conteúdo da página, como cores, fontes e layout.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Meu Projeto de Flashcards</p>
+    </footer>
+
+</body>
+</html>
