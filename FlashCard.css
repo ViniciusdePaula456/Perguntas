@@ -1,0 +1,88 @@
+/* Estilos gerais da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+h1 {
+    color: #2c3e50;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Estilos do contêiner do flashcard */
+.flashcard-container {
+    width: 300px;
+    height: 200px;
+    perspective: 1000px; /* Essencial para o efeito 3D de virar */
+    cursor: pointer;
+}
+
+/* Estilos do flashcard em si */
+.flashcard {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d; /* Permite que as faces do cartão fiquem em 3D */
+    transition: transform 0.6s; /* Suaviza a animação de virar */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Estilo para quando o cartão for virado */
+.flashcard.flipped {
+    transform: rotateY(180deg);
+}
+
+/* Estilos para as faces (frente e verso) */
+.flashcard-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Esconde o verso da face quando está de frente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.flashcard-front {
+    background-color: #ffffff;
+}
+
+.flashcard-back {
+    background-color: #e6f7ff; /* Um azul claro */
+    color: #007bff;
+    transform: rotateY(180deg); /* Gira o verso para que ele apareça quando o cartão for virado */
+}
+
+/* Estilos do rodapé */
+footer {
+    margin-top: auto;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 0.8em;
+    color: #777;
+}
